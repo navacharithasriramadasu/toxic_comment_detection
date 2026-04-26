@@ -2,7 +2,7 @@
 # 🛡️ Toxic Comment Detection System
 
 **Summer Internship Project** — Summer of AI (Swecha × IIIT Hyderabad)  
-Presented by: R. Shiva & S. Navacharitha
+Presented by:S. Navacharitha
 
 ---
 
