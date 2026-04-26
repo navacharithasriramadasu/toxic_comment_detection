@@ -206,7 +206,6 @@ Frontend displays result to user
 
 *Summer of AI · Swecha × IIIT Hyderabad*
 =======
-# toxic_comment
->>>>>>> 98e39b2bab67251f92b062a7594d68b2fa88663e
+
 "# toxic_comment_detection" 
 "# toxic_comment_detection" 
