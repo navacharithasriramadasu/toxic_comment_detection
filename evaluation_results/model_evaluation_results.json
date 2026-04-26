@@ -1,0 +1,157 @@
+{
+  "evaluation_info": {
+    "timestamp": "2026-04-26T17:51:23.838108",
+    "model_name": "unitary/toxic-bert",
+    "model_mode": "bert",
+    "test_samples": 38,
+    "evaluation_time_seconds": 224.53865385055542
+  },
+  "metrics": {
+    "overall": {
+      "accuracy": 0.7368421052631579,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1_score": 0.75,
+      "support": 38,
+      "roc_auc": 0.996923076923077
+    },
+    "toxic": {
+      "accuracy": 0.7368421052631579,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1_score": 0.75,
+      "support": 25
+    },
+    "severe_toxic": {
+      "accuracy": 0.868421052631579,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 5
+    },
+    "obscene": {
+      "accuracy": 0.8947368421052632,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1_score": 0.6666666666666666,
+      "support": 8
+    },
+    "threat": {
+      "accuracy": 0.8157894736842105,
+      "precision": 0.8,
+      "recall": 0.4,
+      "f1_score": 0.5333333333333333,
+      "support": 10
+    },
+    "insult": {
+      "accuracy": 0.7631578947368421,
+      "precision": 1.0,
+      "recall": 0.4375,
+      "f1_score": 0.6086956521739131,
+      "support": 16
+    },
+    "identity_hate": {
+      "accuracy": 0.868421052631579,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 5
+    },
+    "classification_report": {
+      "0": {
+        "precision": 0.5652173913043478,
+        "recall": 1.0,
+        "f1-score": 0.7222222222222222,
+        "support": 13.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 25.0
+      },
+      "accuracy": 0.7368421052631579,
+      "macro avg": {
+        "precision": 0.7826086956521738,
+        "recall": 0.8,
+        "f1-score": 0.7361111111111112,
+        "support": 38.0
+      },
+      "weighted avg": {
+        "precision": 0.851258581235698,
+        "recall": 0.7368421052631579,
+        "f1-score": 0.7404970760233919,
+        "support": 38.0
+      }
+    }
+  },
+  "confusion_matrix": [
+    [
+      13,
+      0
+    ],
+    [
+      10,
+      15
+    ]
+  ],
+  "error_analysis": {
+    "total_errors": 10,
+    "error_rate": 0.2631578947368421,
+    "false_positives": 0,
+    "false_negatives": 10,
+    "error_examples": [
+      {
+        "text": "You should be banned forever",
+        "true_label": 1,
+        "predicted_label": 0,
+        "error_type": "False Negative"
+      },
+      {
+        "text": "This is the worst thing ever",
+        "true_label": 1,
+        "predicted_label": 0,
+        "error_type": "False Negative"
+      },
+      {
+        "text": "I don't like this at all",
+        "true_label": 1,
+        "predicted_label": 0,
+        "error_type": "False Negative"
+      },
+      {
+        "text": "All people like you should be eliminated",
+        "true_label": 1,
+        "predicted_label": 0,
+        "error_type": "False Negative"
+      },
+      {
+        "text": "All [group] are terrible people",
+        "true_label": 1,
+        "predicted_label": 0,
+        "error_type": "False Negative"
+      }
+    ]
+  },
+  "model_stats": {
+    "total_analyzed": 76,
+    "toxic_detected": 30,
+    "non_toxic": 46,
+    "toxic_rate": 39.47,
+    "model": "unitary/toxic-bert",
+    "mode": "bert"
+  },
+  "test_data_summary": {
+    "total_samples": 38,
+    "toxic_samples": 25,
+    "non_toxic_samples": 13,
+    "categories": [
+      "toxic",
+      "severe_toxic",
+      "obscene",
+      "threat",
+      "insult",
+      "identity_hate"
+    ]
+  }
+}

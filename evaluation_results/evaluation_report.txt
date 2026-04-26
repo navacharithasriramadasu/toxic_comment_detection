@@ -1,0 +1,89 @@
+TOXIC COMMENT DETECTION MODEL EVALUATION REPORT
+============================================================
+
+Evaluation Date: 2026-04-26T17:51:23.838108
+Model: unitary/toxic-bert (bert)
+Test Samples: 38
+Evaluation Time: 224.54 seconds
+
+OVERALL PERFORMANCE METRICS
+------------------------------
+Accuracy: 0.7368
+Precision: 1.0000
+Recall: 0.6000
+F1 Score: 0.7500
+ROC-AUC: 0.9969
+Support: 38
+
+PER-CATEGORY PERFORMANCE
+------------------------------
+Toxic:
+  Accuracy: 0.7368
+  Precision: 1.0000
+  Recall: 0.6000
+  F1 Score: 0.7500
+  Support: 25
+
+Severe Toxic:
+  Accuracy: 0.8684
+  Precision: 0.0000
+  Recall: 0.0000
+  F1 Score: 0.0000
+  Support: 5
+
+Obscene:
+  Accuracy: 0.8947
+  Precision: 1.0000
+  Recall: 0.5000
+  F1 Score: 0.6667
+  Support: 8
+
+Threat:
+  Accuracy: 0.8158
+  Precision: 0.8000
+  Recall: 0.4000
+  F1 Score: 0.5333
+  Support: 10
+
+Insult:
+  Accuracy: 0.7632
+  Precision: 1.0000
+  Recall: 0.4375
+  F1 Score: 0.6087
+  Support: 16
+
+Identity Hate:
+  Accuracy: 0.8684
+  Precision: 0.0000
+  Recall: 0.0000
+  F1 Score: 0.0000
+  Support: 5
+
+CONFUSION MATRIX
+--------------------
+                Predicted
+                Non-Toxic  Toxic
+Actual Non-Toxic          13      0
+Actual Toxic              10     15
+
+ERROR ANALYSIS
+---------------
+Total Errors: 10
+Error Rate: 26.32%
+False Positives: 0
+False Negatives: 10
+
+Error Examples:
+1. False Negative: 'You should be banned forever...'
+   True: 1, Predicted: 0
+2. False Negative: 'This is the worst thing ever...'
+   True: 1, Predicted: 0
+3. False Negative: 'I don't like this at all...'
+   True: 1, Predicted: 0
+
+MODEL STATISTICS
+--------------------
+Total Analyzed: 76
+Toxic Detected: 30
+Non-Toxic: 46
+Toxic Rate: 39.47%
